@@ -2,8 +2,14 @@ import Section from "./Section";
 
 function About() {
   return (
-    <Section height="75dvh">
-      <h1>About</h1>
+    <Section height="75dvh" title="About">
+      <div>content</div>
+      <div>content</div>
+      <div>content</div>
+      <div>content</div>
+      <div>content</div>
+      <div>content</div>
+      <div>content</div>
     </Section>
   );
 }

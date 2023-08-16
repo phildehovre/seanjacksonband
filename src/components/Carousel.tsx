@@ -10,19 +10,25 @@ const CarouselWrapper = () => {
       title: "title",
       legend: "Best ever",
       customer: "Harry & Sally - Derbyshire",
-      path: `src/assets/1.JPG`,
+      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/c_crop,h_0.75/Sean%20Jackson%20Assets/3_coe94r.jpg`,
     },
     {
       title: "title",
       legend: "My wife is still in love",
       customer: "Harry & Sally - Derbyshire",
-      path: `src/assets/2.JPG`,
+      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/c_crop,h_0.75/cld-sample.jpg`,
     },
     {
       title: "title",
       legend: "Sean saved my marriage",
       customer: "Harry & Sally - Derbyshire",
-      path: `src/assets/3.JPG`,
+      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/c_crop,h_0.75/cld-sample.jpg`,
+    },
+    {
+      title: "title",
+      legend: "Sean saved my marriage",
+      customer: "Harry & Sally - Derbyshire",
+      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/c_crop,h_600,w_900/co_rgb:00000091,e_colorize:50/cld-sample.jpg`,
     },
   ];
 

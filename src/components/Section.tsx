@@ -4,8 +4,10 @@ import "./Section.scss";
 function Section({
   children,
   height = "auto",
+  title,
 }: {
   height?: string;
+  title?: string;
   children: React.ReactNode;
 }) {
   const style = {
@@ -14,6 +16,7 @@ function Section({
 
   return (
     <div className="section-ctn" style={style}>
+      <h1>{title}</h1>
       {children}
     </div>
   );

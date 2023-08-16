@@ -1,12 +1,26 @@
+@import '../variables.scss';
+
 .section-ctn {
     display:flex;
+    flex-direction: column;
     justify-content: center;
-    width: 100dvw;
+    width: 100%;
     align-items: center;
-    flex-direction: row;
-    background-color: rgb(41, 41, 41);
+    background-color: $bg-dark ;
     color: white;
+
+    > h1 {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        // text-align: center;
+        width: 50%;
+        margin-bottom: 1em;
+    }
 }
+
+
 
 @media (max-width: 768px) {
     .section-ctn {
