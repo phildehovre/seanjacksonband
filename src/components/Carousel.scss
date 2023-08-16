@@ -1,7 +1,20 @@
-.carousel-item {
-    max-height: 25dvh
+@media (max-width: 768px) {
+    .carousel-item {
+        max-height: 25dvh
+    }
 }
 
+// .carousel-root {
+//     width: 100vw;
+//     display: flex;
+//     place-content: center;
+//     place-items: center;
+// }
+
+.carousel-item {
+    max-height: 70dvh;
+    max-width: 70dvw;
+}
 .carousel-item::before {
     content: '';
     position: absolute;

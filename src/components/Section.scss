@@ -1,0 +1,16 @@
+.section-ctn {
+    display:flex;
+    justify-content: center;
+    width: 100dvw;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .section-ctn {
+        padding: 2.5em 0 0 0;
+        height: auto !important
+    }
+}

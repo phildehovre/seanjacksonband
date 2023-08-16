@@ -1,7 +1,8 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import CarouselItem from "./CarouselItem";
-import "./Carousel.css";
+import "./Carousel.scss";
+import Section from "./Section";
 
 const CarouselWrapper = () => {
   const items = [
@@ -32,12 +33,18 @@ const CarouselWrapper = () => {
   };
 
   return (
-    <Carousel
-      autoPlay
-      renderItem={(item) => <div className="carousel-item">{item}</div>}
-    >
-      {renderItems()}
-    </Carousel>
+    <Section height="80dvh">
+      <Carousel
+        centerMode
+        width="100%"
+        infiniteLoop
+        autoPlay
+        showThumbs={false}
+        renderItem={(item) => <div className="carousel-item">{item}</div>}
+      >
+        {renderItems()}
+      </Carousel>
+    </Section>
   );
 };
 export default CarouselWrapper;

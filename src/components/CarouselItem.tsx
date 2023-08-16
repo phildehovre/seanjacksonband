@@ -1,4 +1,4 @@
-import "./Carousel.css";
+import "./Carousel.scss";
 type ItemProps = {
   title: string;
   legend: string;
