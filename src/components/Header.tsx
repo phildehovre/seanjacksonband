@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
