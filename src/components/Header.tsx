@@ -37,24 +37,40 @@ function Header() {
               </svg>
             </button>
           </div>
-          <ul>
-            <li>
-              <a href="#" className="text-white hover:text-gray-300">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-gray-300">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-gray-300">
-                Services
-              </a>
-            </li>
-          </ul>
         </div>
+        <ul
+          className={cn(
+            "md:flex", // Flex on medium screens and larger
+            "mt-2", // Add spacing between the button and the dropdown menu
+            "overflow-hidden", // Hide overflow on small screens
+            { hidden: !isMenuOpen }
+          )}
+        >
+          <li>
+            <a
+              href="#"
+              className="block px-4 py-2 text-white hover:text-gray-300"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="block px-4 py-2 text-white hover:text-gray-300"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="block px-4 py-2 text-white hover:text-gray-300"
+            >
+              Services
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
   );
