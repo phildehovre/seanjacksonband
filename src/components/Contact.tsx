@@ -53,8 +53,7 @@ function Contact() {
   };
 
   return (
-    <Section height="80dvh">
-      <h1>Contact</h1>
+    <Section height="80dvh" title="Contact">
       <div>
         <Form {...form}>
           <form
