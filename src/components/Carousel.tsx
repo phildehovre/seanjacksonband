@@ -16,19 +16,25 @@ const CarouselWrapper = () => {
       title: "title",
       legend: "My wife is still in love",
       customer: "Harry & Sally - Derbyshire",
-      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/c_crop,h_0.75/cld-sample.jpg`,
+      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/v1692212203/Sean%20Jackson%20Assets/IMG_0322_sjiu4h.jpg`,
     },
     {
       title: "title",
       legend: "Sean saved my marriage",
       customer: "Harry & Sally - Derbyshire",
-      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/c_crop,h_0.75/cld-sample.jpg`,
+      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/v1692212198/Sean%20Jackson%20Assets/2_ccyrzm.jpg`,
     },
     {
       title: "title",
       legend: "Sean saved my marriage",
       customer: "Harry & Sally - Derbyshire",
-      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/c_crop,h_600,w_900/co_rgb:00000091,e_colorize:50/cld-sample.jpg`,
+      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/v1692212194/Sean%20Jackson%20Assets/IMG_0110_zektex.jpg`,
+    },
+    {
+      title: "title",
+      legend: "Sean saved my marriage",
+      customer: "Harry & Sally - Derbyshire",
+      path: `https://res.cloudinary.com/dtnif6mzm/image/upload/v1692212194/Sean%20Jackson%20Assets/IMG_0145_wen4s0.jpg`,
     },
   ];
 

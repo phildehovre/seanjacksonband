@@ -12,10 +12,10 @@ function CarouselItem({ item }: { item: ItemProps }) {
       <img src={item.path} />
       {/* <p className="legend">{item.legend}</p> */}
       <div className="testimonial">
-        <span>"</span>
+        {/* <span>"</span>
         <h1>{item.legend}</h1>
         <p>{item.customer}</p>
-        <span>"</span>
+        <span>"</span> */}
       </div>
     </div>
   );

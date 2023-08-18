@@ -14,26 +14,26 @@ function Feature() {
     {
       title: "Versatility",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Sean Jackson Band offers a dynamic blend of high energy country blues, funk, and rock music, delivering classic to modern floor fillers with a creative twist.",
       icon: Shuffle,
     },
     {
       title: "Experience",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "With over 10 years of experience, the band has a proven track record of playing at diverse venues including London residencies, ski resorts, exotic beaches, tours of Scandinavia, military gigs, Mediterranean villa parties, and 5-star hotels.",
       icon: Globe,
-    },
-    {
-      title: "Customisable",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      icon: Brush,
     },
     {
       title: "Adaptability",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "From interactive roaming bands for intimate settings to full-blown hoe downs for lively barn parties, or even smooth and soulful performances for elevated gatherings, The Sean Jackson Band is versatile and can cater to a variety of event styles.",
       icon: Wrench,
+    },
+    {
+      title: "Customisable",
+      description:
+        "Sean Jackson can curate a unique lineup of talented musicians to perfectly match the desired musical taste and atmosphere of any event, whether it's a wedding breakfast, barn party, or a sophisticated soirée.",
+      icon: Brush,
     },
   ];
 
@@ -42,7 +42,7 @@ function Feature() {
       return (
         <Card
           key={feature.title}
-          className="bg-black-700 border-none text-color-white w-full md:w-1/3"
+          className="bg-black-700 border-none text-color-white w-full md:w-5/12  h-full"
         >
           <CardHeader className="flex flex-items justify-center">
             <CardTitle className="flex flex-items justify-center">
@@ -53,9 +53,9 @@ function Feature() {
           <CardContent>
             <p>{feature.description}</p>
           </CardContent>
-          <CardFooter>
+          {/* <CardFooter>
             <p>Card Footer</p>
-          </CardFooter>
+          </CardFooter> */}
         </Card>
       );
     });
