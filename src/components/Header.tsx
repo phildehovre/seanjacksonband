@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import ScrollLink from "./ScrollLink";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,6 +8,8 @@ function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Smooth scroll function
 
   return (
     <header className="bg-transparent absolute inset-x-0 top-0">
@@ -56,7 +59,7 @@ function Header() {
           </li>
           <li>
             <a
-              href="#"
+              href="#about"
               className="block px-4 py-2 text-white hover:text-gray-300"
             >
               About
@@ -64,10 +67,18 @@ function Header() {
           </li>
           <li>
             <a
-              href="#"
+              href="#gallery"
               className="block px-4 py-2 text-white hover:text-gray-300"
             >
               Services
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              className="block px-4 py-2 text-white hover:text-gray-300"
+            >
+              Bookings
             </a>
           </li>
         </ul>

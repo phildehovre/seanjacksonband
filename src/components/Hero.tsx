@@ -2,7 +2,7 @@ import "./Hero.scss";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="top">
       <div className="background-img"></div>
       <span className="slogan-ctn">
         <span>The</span>

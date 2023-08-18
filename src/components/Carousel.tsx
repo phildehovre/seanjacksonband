@@ -39,7 +39,7 @@ const CarouselWrapper = () => {
   };
 
   return (
-    <Section height="80dvh">
+    <Section id="gallery">
       <Carousel
         centerMode
         width="100%"

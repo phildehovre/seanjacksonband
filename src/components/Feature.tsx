@@ -7,41 +7,47 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import { Brush, Globe, LucideIcon, Shuffle, Wrench } from "lucide-react";
 
 function Feature() {
-  const features = [
+  const features: { title: string; description: string; icon: LucideIcon }[] = [
     {
       title: "Versatility",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      icon: "guitar?",
+      icon: Shuffle,
     },
     {
       title: "Experience",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      icon: "globe",
+      icon: Globe,
     },
     {
       title: "Customisable",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      icon: "spanner",
+      icon: Brush,
     },
     {
       title: "Adaptability",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      icon: "chameleon",
+      icon: Wrench,
     },
   ];
 
   const renderCards = () => {
     return features.map((feature) => {
       return (
-        <Card key={feature.title}>
-          <CardHeader>
-            <CardTitle>{feature.title}</CardTitle>
+        <Card
+          key={feature.title}
+          className="bg-black-700 border-none text-color-white w-full md:w-1/3"
+        >
+          <CardHeader className="flex flex-items justify-center">
+            <CardTitle className="flex flex-items justify-center">
+              <feature.icon size="48" />
+            </CardTitle>
             <CardDescription></CardDescription>
           </CardHeader>
           <CardContent>
@@ -55,7 +61,10 @@ function Feature() {
     });
   };
   return (
-    <Section height="50vh" title="Feature" className="flex-items">
+    <Section
+      title="Feature"
+      classNames="gap-5 px-5  md:flex md:flex-row md:flex-wrap w-full"
+    >
       {renderCards()}
     </Section>
   );

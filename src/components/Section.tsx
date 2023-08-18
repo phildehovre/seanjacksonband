@@ -4,25 +4,24 @@ import { cn } from "@/lib/utils";
 
 function Section({
   children,
-  height = "auto",
   title,
   classNames = "",
+  id,
 }: {
-  height?: string;
   title?: string;
   children: React.ReactNode;
   classNames?: string;
+  id?: string;
 }) {
-  const style = {
-    height: height,
-  };
-
   return (
     <div
-      className={cn("flex-items", `section-ctn ${classNames}`)}
-      style={style}
+      id={id}
+      className={cn(
+        "flex-items py-10 w-full md:w-2/3",
+        `section-ctn ${classNames}`
+      )}
     >
-      <h1 className="px-7 py-2 text-3xl font-bold mb-4 text-left w-full">
+      <h1 className="px-7 py-2 text-3xl font-bold mb-4 text-left w-full ">
         {title}
       </h1>
       {children}

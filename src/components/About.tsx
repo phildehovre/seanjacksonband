@@ -2,7 +2,7 @@ import Section from "./Section";
 
 function About() {
   return (
-    <Section height="75dvh" title="About">
+    <Section id="about" title="About">
       <p className="px-7 text-justify gap-2 flex flex-col gap-3">
         <span>
           The Sean Jackson band is a high energy country blues, funk, rock band
