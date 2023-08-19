@@ -48,7 +48,6 @@ function Feature() {
             <CardTitle className="flex flex-items justify-center">
               <feature.icon size="48" />
             </CardTitle>
-            <CardDescription></CardDescription>
           </CardHeader>
           <CardContent>
             <p>{feature.description}</p>
