@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import ScrollLink from "./ScrollLink";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
