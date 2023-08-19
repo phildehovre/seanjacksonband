@@ -12,7 +12,7 @@ function Hero() {
         </h1>
         <span>Band</span>
         <p>Your Ultimate Country Blues Rock Wedding Experience</p>
-        <a href="#" className="cta-button">
+        <a href="#contact" className="cta-button">
           Book us!
         </a>
       </span>

@@ -54,85 +54,83 @@ function Contact() {
 
   return (
     <Section title="Contact" id="contact">
-      <div>
-        <Form {...form}>
-          <form
-            ref={formRef}
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="rounded-lg border w-full p-4 px-3 md:px-6
-          focus-within:shadow-sm grid grid-cols-12 gap-2"
+      <Form {...form}>
+        <form
+          ref={formRef}
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="rounded-lg border-none w-full md:w-2/3 p-4 px-3 md:px-6
+          focus-within:shadow-sm grid grid-cols-12 gap-2 h-full"
+        >
+          <FormField
+            name="from_firstName"
+            render={({ field }) => (
+              <FormItem className="col-span-12 lg:col-span-10">
+                <FormControl className="m-0 p-0">
+                  <Input
+                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                    disabled={isLoading}
+                    placeholder="Name"
+                    {...field}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            name="from_lastName"
+            render={({ field }) => (
+              <FormItem className="col-span-12 lg:col-span-10">
+                <FormControl className="m-0 p-0">
+                  <Input
+                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                    disabled={isLoading}
+                    placeholder="Name"
+                    {...field}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            name="user_email"
+            render={({ field }) => (
+              <FormItem className="col-span-12 lg:col-span-10">
+                <FormControl className="m-0 p-0">
+                  <Input
+                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                    disabled={isLoading}
+                    placeholder="E-mail"
+                    {...field}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            name="message"
+            render={({ field }) => (
+              <FormItem className="col-span-12 lg:col-span-10">
+                <FormControl className="m-0 p-0">
+                  <Textarea
+                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                    disabled={isLoading}
+                    placeholder="Your message"
+                    {...field}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <Button
+            className="col-span-12 lg:col-span-2 w-full"
+            disabled={isLoading}
+            type="submit"
+            onClick={sendEmail}
           >
-            <FormField
-              name="from_firstName"
-              render={({ field }) => (
-                <FormItem className="col-span-12 lg:col-span-10">
-                  <FormControl className="m-0 p-0">
-                    <Input
-                      className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                      disabled={isLoading}
-                      placeholder="Name"
-                      {...field}
-                    />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <FormField
-              name="from_lastName"
-              render={({ field }) => (
-                <FormItem className="col-span-12 lg:col-span-10">
-                  <FormControl className="m-0 p-0">
-                    <Input
-                      className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                      disabled={isLoading}
-                      placeholder="Name"
-                      {...field}
-                    />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <FormField
-              name="user_email"
-              render={({ field }) => (
-                <FormItem className="col-span-12 lg:col-span-10">
-                  <FormControl className="m-0 p-0">
-                    <Input
-                      className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                      disabled={isLoading}
-                      placeholder="E-mail"
-                      {...field}
-                    />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <FormField
-              name="message"
-              render={({ field }) => (
-                <FormItem className="col-span-12 lg:col-span-10">
-                  <FormControl className="m-0 p-0">
-                    <Textarea
-                      className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                      disabled={isLoading}
-                      placeholder="Your message"
-                      {...field}
-                    />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <Button
-              className="col-span-12 lg:col-span-2 w-full"
-              disabled={isLoading}
-              type="submit"
-              onClick={sendEmail}
-            >
-              Send!
-            </Button>
-          </form>
-        </Form>
-      </div>
+            Send!
+          </Button>
+        </form>
+      </Form>
     </Section>
   );
 }
