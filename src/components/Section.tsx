@@ -21,7 +21,7 @@ function Section({
         `section-ctn ${classNames}`
       )}
     >
-      <h1 className="px-7 py-2 text-3xl font-bold mb-4 text-left w-full ">
+      <h1 className="px-7 py-2 text-3xl font-bold mb-4 text-center w-full ">
         {title}
       </h1>
       {children}

@@ -51,7 +51,7 @@ function Testimonials() {
               <Star fill="yellow" color="yellow" />
             </span>
             <p className="text-lg text-center">"{testimonial.content}"</p>
-            <p className="mt-2 font-semibold">{testimonial.name}</p>
+            <p className="mt-2 font-semibold text-center">{testimonial.name}</p>
           </div>
         ))}
       </div>
