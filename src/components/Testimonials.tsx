@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Section from "./Section";
 import { Star } from "lucide-react";
 
@@ -23,16 +24,6 @@ function Testimonials() {
       content:
         "We hired Sean for my 21st after hearing great things about him, and he certainly lived up to expectations! The communication and set up was great and straightforward. Sean managed to get the whole party up on their feet, playing songs that appealed to all age groups. I highly recommend Sean.",
     },
-    // {
-    //     name: ,
-    //     content: ,
-    // },
-    // {
-    //     name: ,
-    //     content: ,
-    // },
-
-    // Add more testimonials here
   ];
 
   return (
@@ -41,7 +32,9 @@ function Testimonials() {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="gap-5 p-2 md:px-8 flex flex-col justify-center bg-black-700 border-none text-color-white w-full md:w-full shadow-lg transform hover:scale-105 transition-transform"
+            className={cn(
+              "gap-5 p-2 md:px-8 flex flex-col justify-center bg-black-700 border-none text-color-white w-full md:w-full shadow-lg transform hover:scale-105 transition-transform"
+            )}
           >
             <span className="flex flex-items justify-center w-full">
               <Star fill="yellow" color="yellow" />
