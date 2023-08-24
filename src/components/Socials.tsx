@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Speaker, Youtube } from "lucide-react";
+import { Facebook, Headphones, Instagram, Youtube } from "lucide-react";
 
 function Socials() {
   return (
@@ -29,7 +29,7 @@ function Socials() {
             href=""
             target="_blank"
           >
-            <Speaker color="green" />
+            <Headphones color="green" />
             Listen to us on Spotify{" "}
           </a>
         </li>

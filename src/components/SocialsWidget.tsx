@@ -1,6 +1,4 @@
-import { faSignal } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Headphones, Instagram, Youtube } from "lucide-react";
 
 function SocialsWidget() {
   return (
@@ -20,7 +18,7 @@ function SocialsWidget() {
         </li>
         <li>
           <a href="" target="_blank">
-            <FontAwesomeIcon icon={faSignal} />
+            <Headphones />
           </a>
         </li>
         <li>
