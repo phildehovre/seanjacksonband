@@ -54,7 +54,7 @@ function Contact() {
   };
 
   return (
-    <Section title="Contact" id="contact">
+    <Section title="Bookings & Enquiries" id="contact">
       <Form {...form}>
         <form
           ref={formRef}

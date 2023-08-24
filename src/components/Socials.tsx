@@ -3,8 +3,8 @@ import { Facebook, Instagram, Speaker, Youtube } from "lucide-react";
 function Socials() {
   return (
     // <Section title="Socials" id="socials" classNames="bg-black text-white">
-    <div className="flex justify-center flex-items w-full">
-      <ul className="flex flex-items flex-col justify-between align-center gap-5 py-3">
+    <div className="">
+      <ul className="flex flex-items flex-col gap-5 py-3">
         <li>
           <a
             className="flex flex-items w-full flex-row gap-5"
