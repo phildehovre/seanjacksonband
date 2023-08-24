@@ -43,7 +43,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="mb-4 flex flex-col gap-5">
+          <div className="mb-4 flex flex-col gap-5 text-center">
             <h3 className="text-xl font-semibold">Social Media</h3>
             <div className="flex mt-2 space-x-4 items-start">
               <Socials />

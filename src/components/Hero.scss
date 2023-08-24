@@ -18,11 +18,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: .4em;
     
     > span {
       font-size: 1.5em;
       font-weight: $font-weight-bold;
+      margin-top: -.4em;
     }
     
     > h1 {
@@ -74,7 +74,7 @@
     transition: 250ms ease-in-out all;
     text-align: center;
     letter-spacing: normal;
-    margin-top: .75em;
+    margin-top: 1.75em;
     
     &:hover {
         background-color: transparent;
