@@ -50,7 +50,7 @@ function Header() {
         >
           <li>
             <a
-              href="#"
+              href=""
               className="block px-4 py-2 text-white hover:text-gray-300"
             >
               Home
@@ -66,10 +66,18 @@ function Header() {
           </li>
           <li>
             <a
+              href="#socials"
+              className="block px-4 py-2 text-white hover:text-gray-300"
+            >
+              Socials
+            </a>
+          </li>
+          <li>
+            <a
               href="#gallery"
               className="block px-4 py-2 text-white hover:text-gray-300"
             >
-              Services
+              Gallery
             </a>
           </li>
           <li>

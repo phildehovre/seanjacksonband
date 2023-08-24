@@ -1,3 +1,5 @@
+import Socials from "./Socials";
+
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -46,27 +48,7 @@ function Footer() {
           <div className="mb-4">
             <h3 className="text-xl font-semibold">Social Media</h3>
             <div className="flex mt-2 space-x-4">
-              <a
-                href="#"
-                className="text-gray-300 hover:text-white"
-                aria-label="Facebook"
-              >
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:text-white"
-                aria-label="Twitter"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:text-white"
-                aria-label="Instagram"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
+              <Socials />
             </div>
           </div>
         </div>

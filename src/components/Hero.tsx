@@ -1,4 +1,5 @@
 import "./Hero.scss";
+import Socials from "./SocialsWidget";
 
 function Hero() {
   return (
@@ -16,6 +17,7 @@ function Hero() {
           Book us!
         </a>
       </span>
+      <Socials />
     </section>
   );
 }

@@ -17,7 +17,7 @@ function Section({
     <div
       id={id}
       className={cn(
-        "flex-items py-10 w-full px-2 md:px-10",
+        "flex-items py-10 w-full px-2 md:px-10 h-full",
         `section-ctn ${classNames}`
       )}
     >

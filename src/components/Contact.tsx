@@ -10,6 +10,7 @@ import Section from "./Section";
 import { Button } from "./ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useRef } from "react";
+import { cn } from "@/lib/utils";
 
 function Contact() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -58,7 +59,7 @@ function Contact() {
         <form
           ref={formRef}
           onSubmit={form.handleSubmit(onSubmit)}
-          className="rounded-lg border-none w-full md:w-2/3 p-4 px-3 md:px-6
+          className=" rounded-lg border-none w-full md:w-2/3 p-4 px-3 md:px-6
           focus-within:shadow-sm grid grid-cols-12 gap-2 h-full"
         >
           <FormField
@@ -69,7 +70,7 @@ function Contact() {
                   <Input
                     className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                     disabled={isLoading}
-                    placeholder="Name"
+                    placeholder="First name"
                     {...field}
                   />
                 </FormControl>
@@ -84,7 +85,7 @@ function Contact() {
                   <Input
                     className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                     disabled={isLoading}
-                    placeholder="Name"
+                    placeholder="Last name"
                     {...field}
                   />
                 </FormControl>
@@ -99,7 +100,7 @@ function Contact() {
                   <Input
                     className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                     disabled={isLoading}
-                    placeholder="E-mail"
+                    placeholder="Your e-mail address"
                     {...field}
                   />
                 </FormControl>
@@ -121,15 +122,15 @@ function Contact() {
               </FormItem>
             )}
           />
-          <Button
-            className="col-span-12 lg:col-span-2 w-full"
-            disabled={isLoading}
-            type="submit"
-            onClick={sendEmail}
-          >
-            Send!
-          </Button>
         </form>
+        <Button
+          className={cn("col-span-12 lg:col-span-2 w-15 bg-red-500")}
+          disabled={isLoading}
+          type="submit"
+          onClick={sendEmail}
+        >
+          Send!
+        </Button>
       </Form>
     </Section>
   );
