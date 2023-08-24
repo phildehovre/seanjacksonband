@@ -7,7 +7,7 @@ function Feature() {
     {
       title: "Versatility",
       description:
-        "The Sean Jackson Band offers a dynamic blend of high energy country blues, funk, and rock music, delivering classic to modern floor fillers with a creative twist.",
+        "The Sean Jackson Band offers a dynamic blend of high-energy country blues, funk, and rock music, delivering classic to modern floor fillers with a creative twist. We bring an unforgettable experience to every note we play.",
       icon: Shuffle,
     },
     {
@@ -54,7 +54,7 @@ function Feature() {
   };
   return (
     <Section
-      title="Feature"
+      title="Services"
       classNames="gap-5 px-5  md:flex md:flex-row md:flex-wrap w-full"
     >
       {renderCards()}
