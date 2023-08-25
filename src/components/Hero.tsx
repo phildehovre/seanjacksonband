@@ -1,11 +1,23 @@
+import { useEffect } from "react";
 import "./Hero.scss";
 import Socials from "./SocialsWidget";
+import { animate, inView } from "motion";
 
 function Hero() {
+  // useEffect(() => {
+  //   inView(".hero", ({ target }) => {
+  //     animate(
+  //       target.querySelector("#socials-widget") as HTMLElement,
+  //       { x: [100, 0] },
+  //       { delay: 0, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
+  //     );
+  //   });
+  // }, []);
+
   return (
     <section className="hero" id="top">
       <div className="background-img"></div>
-      <span className="slogan-ctn">
+      <span className="slogan-ctn" id="slogan">
         <span>The</span>
         <h1>
           Sean
@@ -19,7 +31,7 @@ function Hero() {
           </a>
         </span>
       </span>
-      <Socials />
+      <Socials id="socials-widget" />
     </section>
   );
 }

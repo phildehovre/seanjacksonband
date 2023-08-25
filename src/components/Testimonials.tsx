@@ -1,8 +1,27 @@
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
+// import SplitType from "split-type";
+import { animate, inView } from "motion";
+
 import Section from "./Section";
 import { Star } from "lucide-react";
 
 function Testimonials() {
+  useEffect(() => {
+    inView("#section", ({ target }) => {
+      animate(
+        target.querySelectorAll("#testimonial-left"),
+        { x: [-100, 0] },
+        { delay: 0, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
+      );
+      animate(
+        target.querySelectorAll("#testimonial-right"),
+        { x: [100, 0] },
+        { delay: 0, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
+      );
+    });
+  }, []);
+
   const testimonials = [
     {
       name: "Tracey R. - Berkshire",
@@ -27,14 +46,15 @@ function Testimonials() {
   ];
 
   return (
-    <Section title="Testimonials" classNames="bg-black text-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <Section id="section" title="Testimonials" classNames="bg-black text-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5" id="testimonials">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
             className={cn(
-              "gap-5 p-2 md:px-8 flex flex-col justify-center bg-black-700 border-none text-color-white w-full md:w-full shadow-lg transform hover:scale-105 transition-transform"
+              "gap-5 p-2 md:px-8 flex flex-col justify-center bg-black-700 text-color-white w-full md:w-full shadow-lg"
             )}
+            id={`testimonial-${index % 2 === 0 ? "left" : "right"}`}
           >
             <span className="flex flex-items justify-center w-full">
               <Star fill="yellow" color="yellow" />

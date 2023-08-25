@@ -1,8 +1,11 @@
 import { Facebook, Headphones, Instagram, Youtube } from "lucide-react";
 
-function SocialsWidget() {
+function SocialsWidget({ id }: { id: string }) {
   return (
-    <div className="fixed top-0 right-0 bg-black p-2 top-1/3 rounded-tl-lg rounded-bl-lg ">
+    <div
+      id={id}
+      className="fixed top-0 right-0 bg-black p-2 top-1/3 rounded-tl-lg rounded-bl-lg "
+    >
       <ul className="flex flex-items flex-col justify-between align-center gap-2 py-3 h-full ">
         <li>
           <a
