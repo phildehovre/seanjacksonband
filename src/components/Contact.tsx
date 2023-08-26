@@ -59,13 +59,13 @@ function Contact() {
         <form
           ref={formRef}
           onSubmit={form.handleSubmit(onSubmit)}
-          className=" rounded-lg border-none w-full md:w-2/3 p-4 px-3 md:px-6
-          focus-within:shadow-sm grid grid-cols-12 gap-2 h-full"
+          className=" rounded-lg border-none w-full md:w-1/2 p-4 px-3 md:px-6
+          focus-within:shadow-sm grid grid-cols-10 gap-2 h-full"
         >
           <FormField
             name="from_firstName"
             render={({ field }) => (
-              <FormItem className="col-span-12 lg:col-span-10">
+              <FormItem className="col-span-5 lg:col-span-5">
                 <FormControl className="m-0 p-0">
                   <Input
                     className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
@@ -80,7 +80,7 @@ function Contact() {
           <FormField
             name="from_lastName"
             render={({ field }) => (
-              <FormItem className="col-span-12 lg:col-span-10">
+              <FormItem className="col-span-5 lg:col-span-5">
                 <FormControl className="m-0 p-0">
                   <Input
                     className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
@@ -110,10 +110,10 @@ function Contact() {
           <FormField
             name="message"
             render={({ field }) => (
-              <FormItem className="col-span-12 lg:col-span-10">
+              <FormItem className="col-span-10 lg:col-span-10">
                 <FormControl className="m-0 p-0">
                   <Textarea
-                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent  h-40"
                     disabled={isLoading}
                     placeholder="Your message"
                     {...field}
