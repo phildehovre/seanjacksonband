@@ -1,18 +1,27 @@
 import { useEffect } from "react";
 import "./Hero.scss";
 import Socials from "./SocialsWidget";
-import { animate, inView } from "motion";
+import { animate } from "motion";
 
 function Hero() {
-  // useEffect(() => {
-  //   inView(".hero", ({ target }) => {
-  //     animate(
-  //       target.querySelector("#socials-widget") as HTMLElement,
-  //       { x: [100, 0] },
-  //       { delay: 0, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
-  //     );
-  //   });
-  // }, []);
+  const ctaColor = "rgb(243, 62, 107)";
+
+  useEffect(() => {
+    const controls = animate(
+      "#socials-widget",
+      { x: ["100", 0], color: ["white", ctaColor] },
+      { delay: 0, duration: 0.5 }
+    );
+
+    setTimeout(() => {
+      controls.stop();
+      animate(
+        "#socials-widget",
+        { color: [ctaColor, "white"] },
+        { delay: 0.2, duration: 0.5 }
+      );
+    }, 500);
+  }, []);
 
   return (
     <section className="hero" id="top">

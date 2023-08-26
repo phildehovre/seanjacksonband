@@ -12,12 +12,12 @@ function Testimonials() {
       animate(
         target.querySelectorAll("#testimonial-left"),
         { x: [-100, 0] },
-        { delay: 0, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
+        { delay: 2, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
       );
       animate(
         target.querySelectorAll("#testimonial-right"),
         { x: [100, 0] },
-        { delay: 0, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
+        { delay: 2, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
       );
     });
   }, []);

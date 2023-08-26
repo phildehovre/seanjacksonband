@@ -14,6 +14,7 @@ function Header() {
     <header className="bg-transparent absolute inset-x-0 top-0">
       <nav
         className="container mx-auto md:flex md:flex-items md:justify-between items-center px-4 md:px-8"
+        id="navbar"
         role="navigation"
         aria-label="Main Navigation"
       >
