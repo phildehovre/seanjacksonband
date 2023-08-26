@@ -22,7 +22,11 @@ function Socials() {
         </a>
       </li>
       <li>
-        <a className="flex flex-items flex-row gap-5" href="" target="_blank">
+        <a
+          className="flex flex-items flex-row gap-5"
+          href="https://open.spotify.com/artist/6kj4yI8tHDI7knB4FQ0z7x?si=8iVMRsOhRZSGFJQg-AoJLQ"
+          target="_blank"
+        >
           <Headphones className="text-green-500" />
           Listen to us on Spotify{" "}
         </a>

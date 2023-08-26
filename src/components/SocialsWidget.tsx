@@ -27,7 +27,7 @@ function SocialsWidget({ id }: { id: string }) {
         </li>
         <li>
           <a
-            href=""
+            href="https://open.spotify.com/artist/6kj4yI8tHDI7knB4FQ0z7x?si=8iVMRsOhRZSGFJQg-AoJLQ"
             target="_blank"
             className="hover:text-green-400 transition duration-300 ease-in-out"
           >
