@@ -19,8 +19,8 @@ function Header() {
         aria-label="Main Navigation"
       >
         <div className="flex items-center justify-between p-4 md:px-8">
-          <a href="#" className="text-white font-semibold text-lg">
-            Logo
+          <a href="#" className="text-white font-semibold  h-20 w-20">
+            <img src="src\assets\seanjacksonband-icon.svg" />
           </a>
           <div className="md:hidden">
             <button
