@@ -115,7 +115,7 @@ function Contact() {
                   <Textarea
                     className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent  h-40"
                     disabled={isLoading}
-                    placeholder="Your message"
+                    placeholder="Your message. Please include the date and location of your event and any other relevant information."
                     {...field}
                   />
                 </FormControl>
