@@ -33,7 +33,7 @@ function Hero() {
           <br /> Jackson
         </h1>
         <span>Band</span> */}
-        <img src="src\assets\seanjacksonband-logo.png" />
+        <img src="https://res.cloudinary.com/dtnif6mzm/image/upload/v1693061394/Sean%20Jackson%20Assets/seanjacksonband-logo_deaefl.png" />
         <p className="text-2xl py-5">
           Your Ultimate Country Blues Rock Wedding Experience
         </p>
