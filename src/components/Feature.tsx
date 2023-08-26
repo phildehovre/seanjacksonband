@@ -36,6 +36,7 @@ function Feature() {
         <Card
           key={feature.title}
           className="bg-black-700 border-none text-color-white w-full md:w-5/12  h-full"
+          id="services"
         >
           <CardHeader className="flex flex-items justify-center">
             <CardTitle className="flex flex-items justify-center">
