@@ -19,7 +19,10 @@ function Header() {
         aria-label="Main Navigation"
       >
         <div className="flex items-center justify-between p-4 md:px-8">
-          <a href="#" className="text-white font-semibold  h-20 w-20">
+          <a
+            href="#"
+            className="flex text-white font-semibold  h-20 w-20 items-center"
+          >
             <img src="https://res.cloudinary.com/dtnif6mzm/image/upload/v1693061438/Sean%20Jackson%20Assets/seanjacksonband-icon_sbojbx.svg" />
           </a>
           <div className="md:hidden">
