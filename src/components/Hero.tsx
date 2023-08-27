@@ -27,7 +27,7 @@ function Hero() {
     <section className="hero" id="top">
       <div className="background-img"></div>
       <span className="slogan-ctn" id="slogan">
-        <img src="http://res.cloudinary.com/dtnif6mzm/image/upload/v1693127019/Sean%20Jackson%20Assets/seanjacksonband-logo_fqbgio.png" />
+        <img src="https://res.cloudinary.com/dtnif6mzm/image/upload/v1693137344/Sean%20Jackson%20Assets/seanjacksonband-logo_zpvzhr.png" />
         <p className="text-2xl py-5">
           Your Ultimate Country Blues Rock Wedding Experience
         </p>
