@@ -57,6 +57,7 @@ body, h1, p, ul, li, a {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  /* overflow-x: hidden; */
 }
 
 /* Apply basic styling for accessibility */

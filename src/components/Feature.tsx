@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Brush, Globe, LucideIcon, Shuffle, Wrench } from "lucide-react";
 
 function Feature() {
+  const iconColor = "#F15A29";
+
   const features: { title: string; description: string; icon: LucideIcon }[] = [
     {
       title: "Versatility",
@@ -40,7 +42,7 @@ function Feature() {
         >
           <CardHeader className="flex flex-items justify-center">
             <CardTitle className="flex flex-items justify-center">
-              <feature.icon size="48" />
+              <feature.icon size="48" color={iconColor} />
             </CardTitle>
           </CardHeader>
           <CardContent>

@@ -44,6 +44,7 @@ function Testimonials() {
         "We hired Sean for my 21st after hearing great things about him, and he certainly lived up to expectations! The communication and set up was great and straightforward. Sean managed to get the whole party up on their feet, playing songs that appealed to all age groups. I highly recommend Sean.",
     },
   ];
+  const starColor = "#F15A29";
 
   return (
     <Section id="section" title="Testimonials" classNames="bg-black text-white">
@@ -57,11 +58,11 @@ function Testimonials() {
             id={`testimonial-${index % 2 === 0 ? "left" : "right"}`}
           >
             <span className="flex flex-items justify-center w-full">
-              <Star fill="yellow" color="yellow" />
-              <Star fill="yellow" color="yellow" />
-              <Star fill="yellow" color="yellow" />
-              <Star fill="yellow" color="yellow" />
-              <Star fill="yellow" color="yellow" />
+              <Star fill={starColor} color={starColor} />
+              <Star fill={starColor} color={starColor} />
+              <Star fill={starColor} color={starColor} />
+              <Star fill={starColor} color={starColor} />
+              <Star fill={starColor} color={starColor} />
             </span>
             <p className="text-lg text-center">"{testimonial.content}"</p>
             <p className="mt-2 font-semibold text-center">{testimonial.name}</p>

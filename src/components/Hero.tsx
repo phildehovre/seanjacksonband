@@ -27,17 +27,11 @@ function Hero() {
     <section className="hero" id="top">
       <div className="background-img"></div>
       <span className="slogan-ctn" id="slogan">
-        {/* <span>The</span>
-        <h1>
-          Sean
-          <br /> Jackson
-        </h1>
-        <span>Band</span> */}
-        <img src="https://res.cloudinary.com/dtnif6mzm/image/upload/v1693126014/Sean%20Jackson%20Assets/seanjacksonband-logo_fqbgio.png" />
+        <img src="http://res.cloudinary.com/dtnif6mzm/image/upload/v1693127019/Sean%20Jackson%20Assets/seanjacksonband-logo_fqbgio.png" />
         <p className="text-2xl py-5">
           Your Ultimate Country Blues Rock Wedding Experience
         </p>
-        <span className="flex justify-center md:justify-start">
+        <span className="flex justify-center md:justify-center  ">
           <a href="#contact" className="cta-button">
             Book us!
           </a>

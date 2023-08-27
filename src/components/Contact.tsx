@@ -68,7 +68,7 @@ function Contact() {
               <FormItem className="col-span-5 lg:col-span-5">
                 <FormControl className="m-0 p-0">
                   <Input
-                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                    className="px-2 text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                     disabled={isLoading}
                     placeholder="First name"
                     {...field}
@@ -83,7 +83,7 @@ function Contact() {
               <FormItem className="col-span-5 lg:col-span-5">
                 <FormControl className="m-0 p-0">
                   <Input
-                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                    className=" px-2 text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                     disabled={isLoading}
                     placeholder="Last name"
                     {...field}
@@ -95,10 +95,10 @@ function Contact() {
           <FormField
             name="user_email"
             render={({ field }) => (
-              <FormItem className="col-span-12 lg:col-span-10">
+              <FormItem className="col-span-10 lg:col-span-10">
                 <FormControl className="m-0 p-0">
                   <Input
-                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                    className="px-2 text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                     disabled={isLoading}
                     placeholder="Your e-mail address"
                     {...field}
@@ -113,7 +113,7 @@ function Contact() {
               <FormItem className="col-span-10 lg:col-span-10">
                 <FormControl className="m-0 p-0">
                   <Textarea
-                    className="text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent  h-40"
+                    className="px-2 text-blue-600 border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent  h-40"
                     disabled={isLoading}
                     placeholder="Your message. Please include the date and location of your event and any other relevant information."
                     {...field}
@@ -124,7 +124,7 @@ function Contact() {
           />
         </form>
         <Button
-          className={cn("col-span-12 lg:col-span-2 w-15 bg-red-500")}
+          className={cn("col-span-12 lg:col-span-2 w-15 bg-orange-700")}
           disabled={isLoading}
           type="submit"
           onClick={sendEmail}
