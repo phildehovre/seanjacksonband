@@ -8,16 +8,11 @@ import { Star } from "lucide-react";
 
 function Testimonials() {
   useEffect(() => {
-    inView("#section", ({ target }) => {
+    inView("#testimonial", () => {
       animate(
-        target.querySelectorAll("#testimonial-left"),
-        { x: [-100, 0] },
-        { delay: 2, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
-      );
-      animate(
-        target.querySelectorAll("#testimonial-right"),
-        { x: [100, 0] },
-        { delay: 2, duration: 2, easing: [0.17, 0.55, 0.55, 1] }
+        "#testimonial",
+        { y: [20, 0], opacity: [0, 1] },
+        { delay: 0.5, duration: 1, easing: [0.17, 0.55, 0.55, 1] }
       );
     });
   }, []);
@@ -55,7 +50,7 @@ function Testimonials() {
             className={cn(
               "gap-5 p-2 md:px-8 flex flex-col justify-center bg-black-700 text-color-white w-full md:w-full shadow-lg"
             )}
-            id={`testimonial-${index % 2 === 0 ? "left" : "right"}`}
+            id={`testimonial`}
           >
             <span className="flex flex-items justify-center w-full">
               <Star fill={starColor} color={starColor} />

@@ -1,11 +1,23 @@
+import { useEffect } from "react";
 import Section from "./Section";
 import { Card, CardContent } from "./ui/card";
+import { animate, inView } from "motion";
 
 function About() {
+  useEffect(() => {
+    inView("#about-content", () => {
+      animate(
+        "#about-content",
+        { y: [20, 0], opacity: [0, 1] },
+        { delay: 0.5, duration: 1, easing: [0.17, 0.55, 0.55, 1] }
+      );
+    });
+  }, []);
+
   return (
     <Section id="about" title="About">
       <Card className="bg-black-700 border-none text-color-white w-full md:w-5/6  h-full">
-        <CardContent>
+        <CardContent id="about-content">
           <p className="px-7 text-justify gap-2 flex flex-col gap-3">
             <span>
               The Sean Jackson band is a high energy country blues, funk, rock

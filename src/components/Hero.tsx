@@ -1,26 +1,33 @@
 import { useEffect } from "react";
 import "./Hero.scss";
 import Socials from "./SocialsWidget";
-import { animate } from "motion";
+import { animate, scroll } from "motion";
 
 function Hero() {
   const ctaColor = "rgb(243, 62, 107)";
 
   useEffect(() => {
-    const controls = animate(
+    const duration = 2;
+    const delay = 1;
+    animate(
       "#socials-widget",
-      { x: ["100", 0], color: ["white", ctaColor] },
-      { delay: 0, duration: 0.5 }
+      { x: [50, 0], color: ["white", ctaColor] },
+      {
+        duration: 0.5,
+        x: { duration: 0.5, delay: 0 },
+        color: { duration: 0.5 },
+      }
     );
-
-    setTimeout(() => {
-      controls.stop();
-      animate(
-        "#socials-widget",
-        { color: [ctaColor, "white"] },
-        { delay: 0.2, duration: 0.5 }
-      );
-    }, 500);
+    animate(
+      "#socials-widget",
+      { color: [ctaColor, "white"] },
+      {
+        duration: duration,
+        delay: delay,
+        color: { duration: 0.5 },
+      }
+    );
+    scroll(animate("#slogan", { x: [0, -1000 * 10], y: [0, 100 * 10] }));
   }, []);
 
   return (

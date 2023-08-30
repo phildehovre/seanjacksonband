@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Section.scss";
 import { cn } from "@/lib/utils";
+import { animate, inView } from "motion";
 
 function Section({
   children,
@@ -13,6 +14,16 @@ function Section({
   classNames?: string;
   id?: string;
 }) {
+  useEffect(() => {
+    const titleAnimation = inView("#section-title", () => {
+      animate(
+        "#section-title",
+        { opacity: [0, 1], y: [20, 0] },
+        { duration: 2 }
+      );
+    });
+  });
+
   return (
     <div
       id={id}
@@ -21,7 +32,10 @@ function Section({
         `section-ctn ${classNames}`
       )}
     >
-      <h1 className="px-7 py-2 text-3xl font-bold mb-4 text-center w-full ">
+      <h1
+        id="section-title"
+        className="px-7 py-2 text-3xl font-bold mb-4 text-center w-full "
+      >
         {title}
       </h1>
       {children}
