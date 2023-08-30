@@ -15,7 +15,7 @@ function Section({
   id?: string;
 }) {
   useEffect(() => {
-    const titleAnimation = inView("#section-title", () => {
+    inView("#section-title", () => {
       animate(
         "#section-title",
         { opacity: [0, 1], y: [20, 0] },
