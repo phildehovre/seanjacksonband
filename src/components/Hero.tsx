@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./Hero.scss";
 import Socials from "./SocialsWidget";
-import { animate, scroll } from "motion";
+import { animate, scroll, timeline } from "motion";
 
 function Hero() {
   const ctaColor = "rgb(243, 62, 107)";
@@ -10,29 +10,46 @@ function Hero() {
     const duration = 2;
     const delay = 1;
     animate(
-      "#socials-widget",
-      { x: [50, 0], color: ["white", ctaColor] },
+      "#background",
+      { scale: [1, 1.25] },
       {
-        duration: 0.5,
-        x: { duration: 0.5, delay: 0 },
-        color: { duration: 0.5 },
+        duration: 10,
+        repeat: Infinity,
+        direction: "alternate-reverse",
+        easing: "linear",
       }
     );
-    animate(
-      "#socials-widget",
-      { color: [ctaColor, "white"] },
-      {
-        duration: duration,
-        delay: delay,
-        color: { duration: 0.5 },
-      }
+    timeline([
+      [
+        "#socials-widget",
+        { x: [50, 0], color: ["white", ctaColor] },
+        {
+          duration: 0.5,
+          x: { duration: 0.5 },
+          color: { duration: 0.5 },
+        },
+      ],
+      [
+        "#socials-widget",
+        { color: [ctaColor, "white"] },
+        {
+          duration: duration,
+          delay: delay,
+          color: { duration: 0.5 },
+        },
+      ],
+    ]);
+    scroll(
+      animate("#slogan", {
+        x: [0, -1000 * 10],
+        y: [0, 100 * 10],
+      })
     );
-    scroll(animate("#slogan", { x: [0, -1000 * 10], y: [0, 100 * 10] }));
   }, []);
 
   return (
     <section className="hero" id="top">
-      <div className="background-img"></div>
+      <div id="background" className="background-img"></div>
       <span className="slogan-ctn" id="slogan">
         <img src="https://res.cloudinary.com/dtnif6mzm/image/upload/v1693137344/Sean%20Jackson%20Assets/seanjacksonband-logo_zpvzhr.png" />
         <p className="text-2xl py-5">
