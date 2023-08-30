@@ -11,9 +11,9 @@ function Hero() {
     const delay = 1;
     animate(
       "#background",
-      { scale: [1, 1.25] },
+      { scale: [1, 1.1] },
       {
-        duration: 10,
+        duration: 15,
         repeat: Infinity,
         direction: "alternate-reverse",
         easing: "linear",
