@@ -56,17 +56,17 @@
         font-size: $lg-font-size;
       }
       
-    &::before {
-        content: '';
-        top: -100px;
-        left: -100px;
-        position: absolute;
-        height: 600px;
-        background-color: rgba(0, 0, 0, 0.575);
-        width: 600px;
-        border-radius: 100%;
-        z-index: -1;
-    }
+    // &::before {
+    //     content: '';
+    //     top: -100px;
+    //     left: -100px;
+    //     position: absolute;
+    //     height: 600px;
+    //     background-color: rgba(0, 0, 0, 0.575);
+    //     width: 600px;
+    //     border-radius: 100%;
+    //     z-index: -1;
+    // }
     }
   }
   
