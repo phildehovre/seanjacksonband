@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./Hero.scss";
 import Socials from "./SocialsWidget";
-import { animate, scroll, timeline } from "motion";
+import { animate, scroll, timeline, spring } from "motion";
 
 function Hero() {
   const ctaColor = "rgb(243, 62, 107)";
@@ -9,6 +9,13 @@ function Hero() {
   useEffect(() => {
     const duration = 2;
     const delay = 1;
+    animate(
+      "#slogan",
+      {
+        scale: [0, 1],
+      },
+      { scale: { easing: spring({ velocity: 5 }), delay: 1 } }
+    );
     animate(
       "#background",
       { scale: [1, 1.1] },

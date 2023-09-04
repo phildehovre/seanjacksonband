@@ -9,10 +9,12 @@ import { Input } from "./ui/input";
 import Section from "./Section";
 import { Button } from "./ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 function Contact() {
+  const [isSent, setIsSent] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -24,10 +26,12 @@ function Contact() {
   });
 
   const formRef = useRef<HTMLFormElement | null>(null);
-
+  // seanyboyjackson@gmail.com
   const isLoading = form.formState.isSubmitting;
 
   const sendEmail = (e: any) => {
+    setIsSending(true);
+
     e.preventDefault();
     emailjs
       .sendForm(
@@ -41,16 +45,20 @@ function Contact() {
         (result) => {
           console.log(result.text);
           form.reset();
+          setIsSending(false);
+          setIsSent(true);
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
-
+  console.log(form.formState);
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    if (!form.formState.isValid) return;
     console.log(data);
     sendEmail(data);
+    form.reset();
   };
 
   return (
@@ -72,6 +80,7 @@ function Contact() {
                     disabled={isLoading}
                     placeholder="First name"
                     {...field}
+                    required
                   />
                 </FormControl>
               </FormItem>
@@ -87,6 +96,7 @@ function Contact() {
                     disabled={isLoading}
                     placeholder="Last name"
                     {...field}
+                    required
                   />
                 </FormControl>
               </FormItem>
@@ -102,6 +112,7 @@ function Contact() {
                     disabled={isLoading}
                     placeholder="Your e-mail address"
                     {...field}
+                    required
                   />
                 </FormControl>
               </FormItem>
@@ -117,6 +128,7 @@ function Contact() {
                     disabled={isLoading}
                     placeholder="Your message. Please include the date and location of your event and any other relevant information."
                     {...field}
+                    required
                   />
                 </FormControl>
               </FormItem>
@@ -124,12 +136,14 @@ function Contact() {
           />
         </form>
         <Button
-          className={cn("col-span-12 lg:col-span-2 w-15 bg-orange-700")}
+          className={cn("col-span-12 lg:col-span-2 w-15 bg-orange-700", {
+            "bg-green-500": isSent,
+          })}
           disabled={isLoading}
           type="submit"
           onClick={sendEmail}
         >
-          Send!
+          {isSending ? "Sending..." : isSent ? "Sent!" : "Send!"}
         </Button>
       </Form>
     </Section>
