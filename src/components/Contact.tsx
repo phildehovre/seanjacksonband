@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { formSchema } from "@/lib/Constants";
-import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 
 import {
@@ -15,7 +14,7 @@ import { Input } from "./ui/input";
 import Section from "./Section";
 import { Button } from "./ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import * as yup from "yup"; // Import Yup
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -44,7 +43,6 @@ function Contact() {
   });
 
   const formRef = useRef<HTMLFormElement | null>(null);
-  // seanyboyjackson@gmail.com
 
   const sendEmail = async () => {
     setIsSending(true);
