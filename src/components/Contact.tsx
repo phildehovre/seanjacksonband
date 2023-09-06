@@ -57,7 +57,7 @@ function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(result);
           form.reset();
           setIsSending(false);
           setIsSent(true);
