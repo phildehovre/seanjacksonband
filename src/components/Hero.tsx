@@ -59,7 +59,7 @@ function Hero() {
       <div id="background" className="background-img"></div>
       <span className="slogan-ctn" id="slogan">
         <img src="https://res.cloudinary.com/dtnif6mzm/image/upload/v1693137344/Sean%20Jackson%20Assets/seanjacksonband-logo_zpvzhr.png" />
-        <p className="text-2xl py-5">
+        <p className="text-3xl py-5">
           Your Ultimate Country Blues Rock Wedding Experience
         </p>
         <span className="flex justify-center md:justify-center  ">
