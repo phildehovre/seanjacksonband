@@ -5,6 +5,12 @@ import { animate, inView } from "motion";
 
 import Section from "./Section";
 import { Star } from "lucide-react";
+import { render } from "react-dom";
+
+type Testimonial = {
+  name: string;
+  content: string;
+};
 
 function Testimonials() {
   useEffect(() => {
@@ -18,11 +24,6 @@ function Testimonials() {
   }, []);
 
   const testimonials = [
-    {
-      name: "Karl and Nicola",
-      content:
-        "Sean and the band are all extremely talented musicians. This is not your standard wedding function band… the set list was meticulously put together to create THE BEST party atmosphere (No one left the dance floor) They absolutely rocked it! Without a doubt they were the highlight of our wedding - our guests were raving about it. We would HIGHLY recommend them for any event or wedding.",
-    },
     {
       name: "Tracey R. - Berkshire",
       content:
@@ -43,31 +44,44 @@ function Testimonials() {
       content:
         "We hired Sean for my 21st after hearing great things about him, and he certainly lived up to expectations! The communication and set up was great and straightforward. Sean managed to get the whole party up on their feet, playing songs that appealed to all age groups. I highly recommend Sean.",
     },
+    {
+      name: "Karl and Nicola",
+      content:
+        "Sean and the band are all extremely talented musicians. This is not your standard wedding function band… the set list was meticulously put together to create THE BEST party atmosphere (No one left the dance floor) They absolutely rocked it! Without a doubt they were the highlight of our wedding - our guests were raving about it. We would HIGHLY recommend them for any event or wedding.",
+    },
   ];
   const starColor = "#F15A29";
+
+  const renderTestimonials = (testimonials: Testimonial[]) => {
+    return testimonials.map((testimonial, index) => (
+      <div
+        key={index}
+        className={cn(
+          `gap-5 p-2 md:px-8 ${
+            testimonials.length === 1 ? "col-span-2" : ""
+          } flex flex-col align-items flex-start bg-black-700 text-color-white w-full md:w-full shadow-lg`
+        )}
+        id={`testimonial`}
+      >
+        <span className="flex justify-center">
+          <Star fill={starColor} color={starColor} />
+          <Star fill={starColor} color={starColor} />
+          <Star fill={starColor} color={starColor} />
+          <Star fill={starColor} color={starColor} />
+          <Star fill={starColor} color={starColor} />
+        </span>
+        <p className="text-lg text-center">"{testimonial.content}"</p>
+        <p className="mt-2 font-semibold text-center">{testimonial.name}</p>
+      </div>
+    ));
+  };
 
   return (
     <Section id="section" title="Testimonials" classNames="bg-black text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5" id="testimonials">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className={cn(
-              "gap-5 p-2 md:px-8 flex flex-col justify-center bg-black-700 text-color-white w-full md:w-full shadow-lg"
-            )}
-            id={`testimonial`}
-          >
-            <span className="flex flex-items justify-center w-full">
-              <Star fill={starColor} color={starColor} />
-              <Star fill={starColor} color={starColor} />
-              <Star fill={starColor} color={starColor} />
-              <Star fill={starColor} color={starColor} />
-              <Star fill={starColor} color={starColor} />
-            </span>
-            <p className="text-lg text-center">"{testimonial.content}"</p>
-            <p className="mt-2 font-semibold text-center">{testimonial.name}</p>
-          </div>
-        ))}
+        {testimonials.length % 2 !== 0 &&
+          renderTestimonials([testimonials.pop() as Testimonial])}
+        {testimonials.length % 2 === 0 && renderTestimonials(testimonials)}
       </div>
     </Section>
   );
