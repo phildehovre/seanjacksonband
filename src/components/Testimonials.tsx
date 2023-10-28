@@ -19,6 +19,11 @@ function Testimonials() {
 
   const testimonials = [
     {
+      name: "Karl and Nicola",
+      content:
+        "Sean and the band are all extremely talented musicians. This is not your standard wedding function band… the set list was meticulously put together to create THE BEST party atmosphere (No one left the dance floor) They absolutely rocked it! Without a doubt they were the highlight of our wedding - our guests were raving about it. We would HIGHLY recommend them for any event or wedding.",
+    },
+    {
       name: "Tracey R. - Berkshire",
       content:
         "Always such a worry booking a band you’ve never seen, but five seconds into the first song, we knew we’d made a great choice. […] Guests commented all evening on how fantastic they were and they were with doubt the best function band I’ve ever seen.",
