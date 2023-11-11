@@ -5,7 +5,6 @@ import { animate, inView } from "motion";
 
 import Section from "./Section";
 import { Star } from "lucide-react";
-import { render } from "react-dom";
 
 type Testimonial = {
   name: string;
