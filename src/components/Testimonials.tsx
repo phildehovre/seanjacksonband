@@ -77,11 +77,13 @@ function Testimonials() {
 
   return (
     <Section id="section" title="Testimonials" classNames="bg-black text-white">
+      <span
+        style={{ width: "100%", display: "flex", justifyContent: "center" }}
+      >
+        {testimonials.length % 2 !== 0 &&
+          renderTestimonials([testimonials.pop() as Testimonial])}
+      </span>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5" id="testimonials">
-        <span>
-          {testimonials.length % 2 !== 0 &&
-            renderTestimonials([testimonials.pop() as Testimonial])}
-        </span>
         {testimonials.length % 2 === 0 && renderTestimonials(testimonials)}
         {/* {renderTestimonials(testimonials)} */}
       </div>
