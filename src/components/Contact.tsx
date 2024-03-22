@@ -49,7 +49,7 @@ function Contact() {
 
     await emailjs
       .sendForm(
-        "service_w9z916m",
+        "service_mzeclsf",
         "template_momqrgr",
         formRef.current as HTMLFormElement,
         // data as HTMLFormElement,
