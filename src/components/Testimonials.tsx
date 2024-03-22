@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useEffect, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 // import SplitType from "split-type";
 import { animate, inView } from "motion";
 
