@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 // import SplitType from "split-type";
 import { animate, inView } from "motion";
 
@@ -12,7 +12,7 @@ type Testimonial = {
 };
 
 function Testimonials() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     inView("#testimonial", () => {
       animate(
         "#testimonial",
