@@ -13,7 +13,7 @@ function App() {
     <>
       <Router>
       <Helmet>
-        <title>Top Country Wedding Band | Book the Best Wedding Band in UK</title>
+        <title>The SJB Country Experience | Book the Best Wedding Band in UK</title>
         <meta name="description" content="Looking for the perfect country band for your wedding? Book the best wedding band in the UK today. High-energy country music to make your big day unforgettable!" />
         <script type="application/ld+json">  
           {`
