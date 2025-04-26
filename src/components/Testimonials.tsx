@@ -12,12 +12,13 @@ type Testimonial = {
 };
 
 function Testimonials() {
+
   useLayoutEffect(() => {
     inView("#testimonial", () => {
       animate(
         "#testimonial",
         { y: [20, 0], opacity: [0, 1] },
-        { delay: 0.5, duration: 1, easing: [0.17, 0.55, 0.55, 1] }
+        { delay: 0.5, duration: .3, easing: [0.17, 0.55, 0.55, 1] }
       );
     });
   }, []);
