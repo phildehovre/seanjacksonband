@@ -9,27 +9,27 @@ function Feature() {
     {
       title: "Versatility",
       description:
-        "The Sean Jackson Band offers a dynamic blend of high-energy country blues, funk, and rock music, delivering classic to modern floor fillers with a creative twist. We bring an unforgettable experience to every note we play.",
+        "The SJB Country Music Experience is a high energy 5 piece Country Rock band available to book now. With a unique blend of country music medleys, bluegrass reels, and their own material, SJB will always leave a crowd demanding more. ",
       icon: Shuffle,
     },
     {
       title: "Experience",
       description:
-        "With over 10 years of experience, the band has a proven track record of playing at diverse venues including London residencies, ski resorts, exotic beaches, tours of Scandinavia, military gigs, Mediterranean villa parties, and 5-star hotels.",
+        "With over 15 years of experience, the band has a proven track record of playing at diverse venues including London residencies, ski resorts, exotic beaches, tours of Scandinavia, military gigs, Mediterranean villa parties, and 5-star hotels.",
       icon: Globe,
     },
-    {
-      title: "Adaptability",
-      description:
-        "From interactive roaming bands for intimate settings to full-blown hoe downs for lively barn parties, or even smooth and soulful performances for elevated gatherings, The Sean Jackson Band is versatile and can cater to a variety of event styles.",
-      icon: Wrench,
-    },
-    {
-      title: "Customisable",
-      description:
-        "Sean Jackson can curate a unique lineup of talented musicians to perfectly match the desired musical taste and atmosphere of any event, whether it's a wedding breakfast, barn party, or a sophisticated soirée.",
-      icon: Brush,
-    },
+    // {
+    //   title: "Adaptability",
+    //   description:
+    //     "From interactive roaming bands for intimate settings to full-blown hoe downs for lively barn parties, or even smooth and soulful performances for elevated gatherings, The Sean Jackson Band is versatile and can cater to a variety of event styles.",
+    //   icon: Wrench,
+    // },
+    // {
+    //   title: "Customisable",
+    //   description:
+    //     "Sean Jackson can curate a unique lineup of talented musicians to perfectly match the desired musical taste and atmosphere of any event, whether it's a wedding breakfast, barn party, or a sophisticated soirée.",
+    //   icon: Brush,
+    // },
   ];
 
   const renderCards = () => {
@@ -57,8 +57,8 @@ function Feature() {
   };
   return (
     <Section
-      title="Services"
-      classNames="gap-5 px-5  md:flex md:flex-row md:flex-wrap w-full"
+      title="The Ultimate Country Music Experience"
+      classNames="gap-5 px-5 items-start md:flex md:flex-row md:flex-wrap w-full"
     >
       {renderCards()}
     </Section>

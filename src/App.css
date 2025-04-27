@@ -12,7 +12,7 @@
 } */
 
 @media (min-width: 768px) {
-  
+  /*Large screen  */
   .background-img {
     position: fixed;
     left: 0;
@@ -50,10 +50,9 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url('');
-  background-position-y: 50px;
   background-position-x: center;
   background-size: 175svh;
+    background-image: url('https://res.cloudinary.com/dtnif6mzm/image/upload/v1745671636/Sean%20Jackson%20Assets/SeanJacksonBand-10_en1sht.jpg');
 }
 .background-img::after {
 position: absolute;
