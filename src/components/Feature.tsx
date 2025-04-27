@@ -18,18 +18,7 @@ function Feature() {
         "With over 15 years of experience, the band has a proven track record of playing at diverse venues including London residencies, ski resorts, exotic beaches, tours of Scandinavia, military gigs, Mediterranean villa parties, and 5-star hotels.",
       icon: Globe,
     },
-    // {
-    //   title: "Adaptability",
-    //   description:
-    //     "From interactive roaming bands for intimate settings to full-blown hoe downs for lively barn parties, or even smooth and soulful performances for elevated gatherings, The Sean Jackson Band is versatile and can cater to a variety of event styles.",
-    //   icon: Wrench,
-    // },
-    // {
-    //   title: "Customisable",
-    //   description:
-    //     "Sean Jackson can curate a unique lineup of talented musicians to perfectly match the desired musical taste and atmosphere of any event, whether it's a wedding breakfast, barn party, or a sophisticated soirée.",
-    //   icon: Brush,
-    // },
+
   ];
 
   const renderCards = () => {
@@ -38,7 +27,7 @@ function Feature() {
         <Card
           key={feature.title}
           className="bg-black-700 border-none text-color-white w-full md:w-5/12  h-full"
-          id="services"
+          id="about"
         >
           <CardHeader className="flex flex-items justify-center">
             <CardTitle className="flex flex-items justify-center">
@@ -59,6 +48,7 @@ function Feature() {
     <Section
       title="The Ultimate Country Music Experience"
       classNames="gap-5 px-5 items-start md:flex md:flex-row md:flex-wrap w-full"
+      id="about"
     >
       {renderCards()}
     </Section>

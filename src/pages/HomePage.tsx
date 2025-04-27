@@ -1,4 +1,4 @@
-import About from "../components/About";
+// import About from "../components/About";
 import Carousel from "../components/Carousel";
 import Contact from "../components/Contact";
 import Feature from "../components/Feature";
