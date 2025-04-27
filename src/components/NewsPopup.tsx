@@ -73,7 +73,7 @@ const NewsPopup = (props: { onClose: () => void }) => {
       >
         {/* BADGE */}
         <div className="absolute z-20 -top-20 -left-10 bg-[#F15A29] text-black font-black text-xl w-[150px] h-[150px] flex justify-center items-center px-4 py-2 rounded-full rotate-[-25deg] shadow-md text-center">
-          BRAND<br />NEW<br />VIDEO<br />OUT!
+          NEW<br />VIDEO!
         </div>
   
         {/* VIDEO */}

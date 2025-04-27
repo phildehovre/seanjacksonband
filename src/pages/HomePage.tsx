@@ -11,7 +11,7 @@ function HomePage() {
       <Hero />
       <Testimonials />
       <Carousel />
-      <About />
+      {/* <About /> */}
       <Feature />
       <Contact />
     </main>
