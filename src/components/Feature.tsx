@@ -1,6 +1,6 @@
 import Section from "./Section";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Brush, Globe, LucideIcon, Shuffle, Wrench } from "lucide-react";
+import { Globe, LucideIcon, Shuffle } from "lucide-react";
 
 function Feature() {
   const iconColor = "#F15A29";
