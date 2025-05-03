@@ -55,11 +55,9 @@ function Feature() {
       >
         {renderCards()}
       </div>
-    <div className="socials_ctn">
-      <h3>Follow the band on social media for more information</h3>
-      <div className="socials flex w-full justify-center">
-        <div className="flex gap-4 items-center">
-        <div className="flex gap-4 items-center text-white">
+    <div className="socials_ctn px-10 flex-col">
+      <h3 className="mb-5 text-orange-600 font-bold">Follow the band on social media for more information</h3>
+      <div className="socials flex w-full justify-center gap-4">
   <a
     href="https://www.youtube.com/@Seanyplank"
     target="_blank"
@@ -118,8 +116,6 @@ function Feature() {
 </div>
 
         </div>
-      </div>
-    </div>
     </Section>
   );
 }
