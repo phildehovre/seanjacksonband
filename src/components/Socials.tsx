@@ -38,8 +38,7 @@ function Socials() {
           href="https://www.instagram.com/seanjacksonband/"
           target="_blank"
         >
-          <Instagram size="30" className="text-pink-500" />
-          We look pretty good on Instagram too!
+        <Instagram size="25" className="text-pink-500" />We look pretty good on Instagram too!
         </a>
       </li>
     </ul>

@@ -72,7 +72,7 @@ const NewsPopup = (props: { onClose: () => void }) => {
         className="relative bg-black rounded-lg p-6 shadow-lg max-w-[800px] w-full opacity-0 translate-y-12"
       >
         {/* BADGE */}
-        <div className="absolute z-20 -top-20 -left-10 bg-[#F15A29] text-black font-black text-xl w-[150px] h-[150px] flex justify-center items-center px-4 py-2 rounded-full rotate-[-25deg] shadow-md text-center">
+        <div className="absolute z-20 -top-20 -left-10 bg-[#F15A29] text-black font-black text-xl w-[150px] h-[150px] flex justify-center items-center p-2 rounded-full rotate-[-25deg] shadow-md text-center">
           NEW<br />VIDEO!
         </div>
   

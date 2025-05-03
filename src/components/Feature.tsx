@@ -1,6 +1,6 @@
 import Section from "./Section";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Globe, LucideIcon, Shuffle } from "lucide-react";
+import { Facebook, Globe, Headphones, Instagram, LucideIcon, Shuffle, Youtube } from "lucide-react";
 
 function Feature() {
   const iconColor = "#F15A29";
@@ -47,10 +47,79 @@ function Feature() {
   return (
     <Section
       title="The Ultimate Country Music Experience"
-      classNames="gap-5 px-5 items-start md:flex md:flex-row md:flex-wrap w-full"
+      classNames="gap-5 px-5 items-start md:flex md:flex-row md:flex-wrap w-full md:justify-items"
       id="about"
     >
-      {renderCards()}
+      <div
+        className="gap-5 px-5 items-start md:flex md:flex-row md:flex-wrap w-full justify-center"
+      >
+        {renderCards()}
+      </div>
+    <div className="socials_ctn">
+      <h3>Follow the band on social media for more information</h3>
+      <div className="socials flex w-full justify-center">
+        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center text-white">
+  <a
+    href="https://www.youtube.com/@Seanyplank"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group transition-colors duration-300"
+  >
+    <Youtube
+      className="transition-colors duration-300"
+      style={{ color: 'white' }}
+      onMouseEnter={e => (e.currentTarget.style.color = 'red')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'white')}
+    />
+  </a>
+
+  <a
+    href="https://www.facebook.com/seanjacksonband"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group transition-colors duration-300"
+  >
+    <Facebook
+      className="transition-colors duration-300"
+      style={{ color: 'white' }}
+      onMouseEnter={e => (e.currentTarget.style.color = 'dodgerBlue')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'white')}
+    />
+  </a>
+
+  <a
+    href="https://open.spotify.com/artist/6kj4yI8tHDI7knB4FQ0z7x?si=8iVMRsOhRZSGFJQg-AoJLQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group transition-colors duration-300"
+  >
+    <Headphones
+      className="transition-colors duration-300"
+      style={{ color: 'white' }}
+      onMouseEnter={e => (e.currentTarget.style.color = 'limegreen')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'white')}
+    />
+  </a>
+
+  <a
+    href="https://www.instagram.com/seanjacksonband/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group transition-colors duration-300"
+  >
+    <Instagram
+      className="transition-colors duration-300"
+      style={{ color: 'white' }}
+      onMouseEnter={e => (e.currentTarget.style.color = 'pink')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'white')}
+    />
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
     </Section>
   );
 }
