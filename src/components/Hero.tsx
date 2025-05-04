@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Hero.scss";
 import Socials from "./SocialsWidget";
 import { animate, scroll, timeline, spring } from "motion";
@@ -8,7 +8,25 @@ import NewsPopup from "./NewsPopup";
 function Hero() {
   const ctaColor = "rgb(243, 62, 107)";
   const [displayModal, setDisplayModal] =useState(true)
+  const [bgLoaded, setBgLoaded] = useState(false)
 
+  const HDbackground = useRef(null)
+
+  useEffect(() => {
+    const img = HDbackground.current as HTMLImageElement | null;
+    if (!img) return;
+  
+    const handleLoad = () => setBgLoaded(true);
+  
+    if (img.complete) {
+      setBgLoaded(true);
+    } else {
+      img.addEventListener("load", handleLoad);
+      return () => {
+        img.removeEventListener("load", handleLoad);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     const returningVisitor = getCookie('returningVisitor')
@@ -71,12 +89,16 @@ function Hero() {
     setCookie('returningVisitor', 'true', 30)
   }
 
-
+  const bgStyles = {
+    backgroundImage: 'url(https://res.cloudinary.com/dtnif6mzm/image/upload/t_sjb-background-mini/v1745671633/Sean%20Jackson%20Assets/SeanJacksonBand-20_vsqjnu.jpg)',
+  };
   return (
     <section className="hero" id="top">
       {displayModal && <NewsPopup onClose={handleClosePopup} />}
       
-      <div id="background" className="background-img"></div>
+      <div className='blur-load' id='background' style={bgStyles}>
+        <img className={`background-img ${bgLoaded? 'loaded': ''}`} ref={HDbackground} src='https://res.cloudinary.com/dtnif6mzm/image/upload/v1745671633/Sean%20Jackson%20Assets/SeanJacksonBand-20_vsqjnu.jpg' />
+      </div>
       <span className="slogan-ctn" id="slogan">
         <img src="https://res.cloudinary.com/dtnif6mzm/image/upload/v1693137344/Sean%20Jackson%20Assets/seanjacksonband-logo_zpvzhr.png" />
         <p className="text-3xl py-5 flex text-center font-bold justify-center">
