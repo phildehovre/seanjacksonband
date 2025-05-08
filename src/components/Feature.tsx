@@ -1,6 +1,6 @@
 import Section from "./Section";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Brush, Globe, LucideIcon, Shuffle, Wrench } from "lucide-react";
+import { Facebook, Globe, Headphones, Instagram, LucideIcon, Shuffle, Youtube } from "lucide-react";
 
 function Feature() {
   const iconColor = "#F15A29";
@@ -9,27 +9,16 @@ function Feature() {
     {
       title: "Versatility",
       description:
-        "The Sean Jackson Band offers a dynamic blend of high-energy country blues, funk, and rock music, delivering classic to modern floor fillers with a creative twist. We bring an unforgettable experience to every note we play.",
+        "The SJB Country Music Experience is a high energy 5 piece Country Rock band available to book now. With a unique blend of country music medleys, bluegrass reels, and their own material, SJB will always leave a crowd demanding more. ",
       icon: Shuffle,
     },
     {
       title: "Experience",
       description:
-        "With over 10 years of experience, the band has a proven track record of playing at diverse venues including London residencies, ski resorts, exotic beaches, tours of Scandinavia, military gigs, Mediterranean villa parties, and 5-star hotels.",
+        "With over 15 years of experience, the band has a proven track record of playing at diverse venues including London residencies, ski resorts, exotic beaches, tours of Scandinavia, military gigs, Mediterranean villa parties, and 5-star hotels.",
       icon: Globe,
     },
-    {
-      title: "Adaptability",
-      description:
-        "From interactive roaming bands for intimate settings to full-blown hoe downs for lively barn parties, or even smooth and soulful performances for elevated gatherings, The Sean Jackson Band is versatile and can cater to a variety of event styles.",
-      icon: Wrench,
-    },
-    {
-      title: "Customisable",
-      description:
-        "Sean Jackson can curate a unique lineup of talented musicians to perfectly match the desired musical taste and atmosphere of any event, whether it's a wedding breakfast, barn party, or a sophisticated soirée.",
-      icon: Brush,
-    },
+
   ];
 
   const renderCards = () => {
@@ -38,7 +27,7 @@ function Feature() {
         <Card
           key={feature.title}
           className="bg-black-700 border-none text-color-white w-full md:w-5/12  h-full"
-          id="services"
+          id="about"
         >
           <CardHeader className="flex flex-items justify-center">
             <CardTitle className="flex flex-items justify-center">
@@ -57,10 +46,80 @@ function Feature() {
   };
   return (
     <Section
-      title="Services"
-      classNames="gap-5 px-5  md:flex md:flex-row md:flex-wrap w-full"
+      title="The Ultimate Country Music Experience"
+      classNames="gap-5 px-5 items-start md:flex md:flex-row md:flex-wrap w-full md:justify-items"
+      id="about"
     >
-      {renderCards()}
+      <div
+        className="gap-5 px-5 items-start md:flex md:flex-row md:flex-wrap w-full justify-center"
+      >
+        {renderCards()}
+      </div>
+    <div className="socials_ctn">
+      <h3>Follow the band on social media for more information</h3>
+      <div className="socials flex w-full justify-center">
+        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center text-white">
+  <a
+    href="https://www.youtube.com/@Seanyplank"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group transition-colors duration-300"
+  >
+    <Youtube
+      className="transition-colors duration-300"
+      style={{ color: 'white' }}
+      onMouseEnter={e => (e.currentTarget.style.color = 'red')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'white')}
+    />
+  </a>
+
+  <a
+    href="https://www.facebook.com/seanjacksonband"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group transition-colors duration-300"
+  >
+    <Facebook
+      className="transition-colors duration-300"
+      style={{ color: 'white' }}
+      onMouseEnter={e => (e.currentTarget.style.color = 'dodgerBlue')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'white')}
+    />
+  </a>
+
+  <a
+    href="https://open.spotify.com/artist/6kj4yI8tHDI7knB4FQ0z7x?si=8iVMRsOhRZSGFJQg-AoJLQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group transition-colors duration-300"
+  >
+    <Headphones
+      className="transition-colors duration-300"
+      style={{ color: 'white' }}
+      onMouseEnter={e => (e.currentTarget.style.color = 'limegreen')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'white')}
+    />
+  </a>
+
+  <a
+    href="https://www.instagram.com/seanjacksonband/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group transition-colors duration-300"
+  >
+    <Instagram
+      className="transition-colors duration-300"
+      style={{ color: 'white' }}
+      onMouseEnter={e => (e.currentTarget.style.color = 'pink')}
+      onMouseLeave={e => (e.currentTarget.style.color = 'white')}
+    />
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
     </Section>
   );
 }

@@ -4,20 +4,8 @@ function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 ">
-          <div className="mb-4 flex flex-col flex-items  w-full h-full text-center gap-5">
-            <h3 className="text-xl font-semibold">About</h3>
-            <p className="text-s">
-              Uncover the ultimate wedding band journey with The Sean Jackson
-              Band – a versatile ensemble fusing classic to modern repertoire.
-              From electrifying London residencies to igniting lavish parties,
-              our rock-inspired vibe resonates with foot-stomping barn party
-              music that's truly mesmerizing. Elevating celebrations, our
-              interactive roaming band adds an extra layer of excitement,
-              serenading with smooth, soulful performances for an unforgettable
-              experience.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 ">
+ 
           <div className="mb-4 flex flex-col flex-items  w-full h-full text-center gap-5">
             <h3 className="text-xl font-semibold">Links</h3>
             <ul className="mt-2 flex flex-col gap-5">
@@ -31,11 +19,7 @@ function Footer() {
                   About
                 </a>
               </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-white">
-                  Services
-                </a>
-              </li>
+   
               <li>
                 <a href="#contact" className="text-gray-300 hover:text-white">
                   Contact
@@ -50,7 +34,7 @@ function Footer() {
           </div>
           <div className="mb-4 flex flex-col gap-5 text-center">
             <h3 className="text-xl font-semibold">Social Media</h3>
-            <div className="flex mt-2 space-x-4 items-start">
+            <div className="flex mt-2 space-x-4 justify-center items-center w-full">
               <Socials />
             </div>
           </div>

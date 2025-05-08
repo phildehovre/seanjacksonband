@@ -1,12 +1,19 @@
 @media (max-width: 768px) {
     .carousel-item {
-        max-height: 25dvh
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16/9;
     }
 }
 
-
 .carousel-item {
-    max-height: 70dvh;
+
+    .carousel-img {
+        object-fit: cover;
+        height: 100%;
+        width: auto;
+        aspect-ratio: 16/9;
+    }
 }
 .carousel-item::before {
     content: '';
@@ -14,7 +21,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    // height: 100%;
     background-color: hsla(0, 0%, 0%, 0.178);
 }
 

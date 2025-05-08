@@ -6,7 +6,8 @@ function Socials() {
       <li>
         <a
           className="flex flex-items flex-row gap-5"
-          href="https://www.youtube.com/@Seanyplank"
+          // href="https://www.youtube.com/@Seanyplank"
+          href="https://www.youtube.com/watch?v=QlwlT6CPqJ8"
           target="_blank"
         >
           <Youtube className="text-red-600" /> Our Youtube channel!
@@ -37,8 +38,7 @@ function Socials() {
           href="https://www.instagram.com/seanjacksonband/"
           target="_blank"
         >
-          <Instagram size="30" className="text-pink-500" />
-          We look pretty good on Instagram too!
+        <Instagram size="25" className="text-pink-500" />We look pretty good on Instagram too!
         </a>
       </li>
     </ul>
