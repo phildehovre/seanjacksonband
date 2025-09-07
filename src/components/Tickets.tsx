@@ -7,36 +7,16 @@ const TicketSourceEvents: React.FC = () => {
 
 	useEffect(() => {
 		const fetchEvents = async () => {
+			setLoading(true);
 			try {
-				const apiKey = import.meta.env.VITE_TICKETSOURCE_API_KEY;
-
-				if (!apiKey) {
-					throw new Error("Missing API key (VITE_TICKETSOURCE_API_KEY).");
-				}
-
-				// Build Basic Auth header (password is blank)
-				const authHeader = `Bearer ${apiKey}`;
-
-				const res = await fetch("https://api.ticketsource.io/events", {
-					headers: {
-						Authorization: authHeader,
-						"Content-Type": "application/json",
-					},
-				});
-
-				if (!res.ok) {
-					throw new Error(`Error: ${res.status} ${res.statusText}`);
-				}
-
+				const res = await fetch("/api/events");
 				const data = await res.json();
-				setEvents(data.events || data); // adjust depending on API shape
-			} catch (err: any) {
-				setError(err.message);
-			} finally {
-				setLoading(false);
+				console.log(data);
+				setEvents(data);
+			} catch (err) {
+				console.log(err);
 			}
 		};
-
 		fetchEvents();
 	}, []);
 
