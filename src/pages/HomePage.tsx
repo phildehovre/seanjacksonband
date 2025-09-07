@@ -6,16 +6,15 @@ import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
 
 function HomePage() {
-  return (
-    <main>
-      <Hero />
-      <Testimonials />
-      <Carousel />
-      {/* <About /> */}
-      <Feature />
-      <Contact />
-    </main>
-  );
+	return (
+		<main>
+			<Hero />
+			<Testimonials />
+			<Carousel />
+			<Feature />
+			<Contact />
+		</main>
+	);
 }
 
 export default HomePage;
