@@ -62,6 +62,14 @@ function Header() {
 					</li>
 					<li>
 						<a
+							href="#events"
+							className="block px-4 py-2 text-white hover:text-gray-300"
+						>
+							Tickets
+						</a>
+					</li>
+					<li>
+						<a
 							href="#about"
 							className="block px-4 py-2 text-white hover:text-gray-300"
 						>

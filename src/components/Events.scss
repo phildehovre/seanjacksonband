@@ -1,0 +1,83 @@
+@import "../variables";
+
+.events_ctn {
+	padding: 4em;
+	background-color: rgba(0, 0, 0, 0.704);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	gap: 1em;
+
+	> h1 {
+		color: $cta-color;
+		margin: 0 auto 0.5em auto;
+		font-size: 4em;
+
+		text-transform: uppercase;
+	}
+
+	> ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		margin: 0 auto;
+		font-size: 1.2em;
+		max-width: 768px;
+		width: 100%;
+	}
+}
+
+.event {
+	display: flex;
+	justify-content: space-between;
+	gap: 1em;
+
+	> .date {
+		font-size: 1.8em;
+		font-weight: bold;
+		min-width: 25%;
+		text-align: center;
+	}
+
+	> .location {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		width: 100%;
+
+		> .city {
+			font-size: 1.3em;
+		}
+
+		> .venue {
+			font-weight: 100;
+		}
+	}
+
+	> .link_btn {
+		background-color: $cta-color;
+		height: 2em;
+		border-radius: 5px;
+		padding: 0.5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 10em;
+		height: 100%;
+		border: 1px solid $cta-color;
+		transition: 100ms all ease-in-out;
+		&:hover {
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+		&.disabled {
+			background-color: transparent;
+			color: $cta-color;
+			border: none;
+			text-align: center;
+		}
+	}
+}
