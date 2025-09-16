@@ -31,10 +31,6 @@ export default function Events() {
 	const sheetUrl = import.meta.env.VITE_GOOGLE_SHEET_URL;
 	const { data: concerts, loading, error } = useGoogleSheet<Concert>(sheetUrl);
 
-	// state for pagination
-	const [page, setPage] = useState(1);
-	const pageSize = 5;
-
 	// always compute sorted list safely
 	const sortedConcerts = useMemo(() => {
 		if (!Array.isArray(concerts)) return [];
@@ -42,11 +38,6 @@ export default function Events() {
 			(a, b) => parseDate(a.Date).getTime() - parseDate(b.Date).getTime()
 		);
 	}, [concerts]);
-
-	const paginatedConcerts = useMemo(() => {
-		const start = (page - 1) * pageSize;
-		return sortedConcerts.slice(start, start + pageSize);
-	}, [sortedConcerts, page]);
 
 	if (loading) return <p>Loading concerts...</p>;
 	if (error) return <p>Error: {error}</p>;
@@ -73,7 +64,7 @@ export default function Events() {
 				<h1 className="section_header">Upcoming Shows</h1>
 
 				<ul>
-					{paginatedConcerts.map((c, i) => (
+					{sortedConcerts.map((c, i) => (
 						<li key={i} className="event mb-2">
 							<span className="date">{c.Date}</span> {c.Artist}
 							<span className="location">

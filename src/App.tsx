@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TicketPage from "./pages/TicketPage";
 import Events from "./components/Events";
 
 function App() {
