@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const TicketSourceEvents: React.FC = () => {
 	const [events, setEvents] = useState<any[]>([]);
 	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState<string | null>(null);
+	const [error, setError] = useState<unknown>();
 
 	useEffect(() => {
 		const fetchEvents = async () => {
@@ -15,6 +15,7 @@ const TicketSourceEvents: React.FC = () => {
 				setEvents(data);
 			} catch (err) {
 				console.log(err);
+				setError(err);
 			}
 		};
 		fetchEvents();
@@ -23,7 +24,7 @@ const TicketSourceEvents: React.FC = () => {
 	console.log(events);
 
 	if (loading) return <p>Loading events...</p>;
-	if (error) return <p className="text-red-500">Error: {error}</p>;
+	if (error) return <p className="text-red-500">Error: {String(error)}</p>;
 
 	return (
 		<div>

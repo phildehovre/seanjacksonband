@@ -1,4 +1,3 @@
-import { render } from "react-dom";
 import { useGoogleSheet } from "../hooks/useGoogleSheets";
 import "./Events.scss";
 
