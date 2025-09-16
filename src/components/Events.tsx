@@ -1,6 +1,6 @@
 import { useGoogleSheet } from "../hooks/useGoogleSheets";
 import "./Events.scss";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Section from "./Section";
 
 type Concert = {
