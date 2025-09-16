@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TicketPage from "./pages/TicketPage";
+import Events from "./components/Events";
 
 function App() {
 	return (
@@ -46,7 +47,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/privacy" element={<PrivacyPolicy />} />
-					<Route path="/tickets" element={<TicketPage />} />
+					<Route path="/events" element={<Events />} />
 				</Routes>
 				<Footer />
 			</Router>
