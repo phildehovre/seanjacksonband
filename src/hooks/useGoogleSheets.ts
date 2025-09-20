@@ -28,7 +28,6 @@ export function useGoogleSheet<T = any>(csvUrl: string) {
 					}, {} as Record<string, string>)
 				);
 
-				console.log(parsed);
 				setData(parsed as T[]);
 			} catch (err: any) {
 				setError(err.message);
