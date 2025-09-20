@@ -1,0 +1,16 @@
+@import "../variables";
+
+.mobile_menu {
+	color: $cta-text;
+	background-color: rgba(0, 0, 0, 0.238);
+}
+
+@media (max-width: 768px) {
+	nav {
+		transition: 150ms ease-in-out all;
+		&.darken {
+			background-color: rgba(0, 0, 0, 0.238);
+			transition: 250ms ease-in-out all;
+		}
+	}
+}
