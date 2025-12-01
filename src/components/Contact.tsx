@@ -16,28 +16,29 @@ import { Button } from "./ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import * as yup from "yup"; // Import Yup
-import { yupResolver } from "@hookform/resolvers/yup";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-const yupSchema = yup.object().shape({
-	from_firstName: yup.string().required("First name is required"),
-	from_lastName: yup.string().required("Last name is required"),
-	user_email: yup
+export const contactSchema = z.object({
+	from_firstName: z.string().min(1, "First name is required"),
+
+	from_lastName: z.string().min(1, "Last name is required"),
+
+	user_email: z.string().email("Invalid email address"),
+
+	message: z.string().min(1, "Message is required"),
+
+	// Honeypot MUST be empty
+	company: z
 		.string()
-		.email("Invalid email address")
-		.required("Email is required"),
-	message: yup.string().required("Message is required"),
-	company: yup
-		.string()
-		.required() // ensures it's always a string, not undefined
-		.max(0),
+		.max(0, "Honeypot field must be empty")
+		.optional()
+		.default(""),
 });
-
 function Contact() {
 	const [isSent, setIsSent] = useState(false);
 	const [isSending, setIsSending] = useState(false);
 	const form = useForm<z.infer<typeof formSchema>>({
-		resolver: yupResolver(yupSchema),
+		resolver: zodResolver(contactSchema),
 		defaultValues: {
 			from_firstName: "",
 			from_lastName: "",
